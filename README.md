@@ -1,4 +1,4 @@
-<img src="[https://github.com/HigorRoc/Uninove_2021.1/blob/main/Uninove-Logo.png](https://github.com/HigorRoc/ImagensUtilizadas/blob/main/logos/LogoUninove.png)" width="120" height="60">
+<img src="https://github.com/HigorRoc/ImagensUtilizadas/blob/main/logos/LogoUninove.png" width="120" height="60">
 
 # Jogos Digitais :computer:
 ###  Prof. Edson M. Souza - 2022/2
