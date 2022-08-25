@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://tijolo.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.2419, 3.75 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 81.75, 63 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 75, 102.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 87, 159 )
+
+[node name="principal" type="Node2D"]
+position = Vector2( 512, 68 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="player"]
+position = Vector2( 1, -0.999996 )
+scale = Vector2( 1.19996, 1.22197 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 1, 31 )
+scale = Vector2( 3.52, 1 )
+shape = SubResource( 1 )
+
+[node name="obstaculo1" type="StaticBody2D" parent="."]
+
+[node name="Sprite1" type="Sprite" parent="obstaculo1"]
+position = Vector2( -252.25, 451 )
+scale = Vector2( 0.402743, 0.47619 )
+texture = ExtResource( 3 )
+
+[node name="Collision1" type="CollisionShape2D" parent="obstaculo1"]
+position = Vector2( -251, 448 )
+shape = SubResource( 4 )
+
+[node name="obstaculo2" type="StaticBody2D" parent="."]
+position = Vector2( -1, 3 )
+
+[node name="Sprite2" type="Sprite" parent="obstaculo2"]
+position = Vector2( 6.75, 405 )
+scale = Vector2( 0.370324, 0.809523 )
+texture = ExtResource( 3 )
+offset = Vector2( 0.674927, -0.00012207 )
+
+[node name="Collision2" type="CollisionShape2D" parent="obstaculo2"]
+position = Vector2( 7.75, 407 )
+shape = SubResource( 2 )
+
+[node name="obstaculo3" type="StaticBody2D" parent="."]
+
+[node name="Sprite3" type="Sprite" parent="obstaculo3"]
+position = Vector2( 265.75, 352 )
+scale = Vector2( 0.422693, 1.2619 )
+texture = ExtResource( 3 )
+
+[node name="Collision3" type="CollisionShape2D" parent="obstaculo3"]
+position = Vector2( 265.75, 352 )
+shape = SubResource( 5 )
