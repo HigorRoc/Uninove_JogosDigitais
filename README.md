@@ -8,9 +8,7 @@ Este repositório será utilizado para compor todos códigos + links da discplin
 ---
 
 ### :pushpin: Atividades e Arquivos
-> Status da [Atividade 01](): Pendente :warning:
-
-> Status da [Atividade 02](): Pendente :warning:
+> Sem atividades ainda :warning:
 
 ---
 
