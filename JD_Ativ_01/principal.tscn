@@ -1,0 +1,137 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://ghost.tscn" type="PackedScene" id=2]
+[ext_resource path="res://principal.gd" type="Script" id=3]
+[ext_resource path="res://player.gd" type="Script" id=4]
+[ext_resource path="res://pontos.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sounds/pixel-death-66829.mp3" type="AudioStream" id=6]
+[ext_resource path="res://icon4.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 45, 52 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 126, 25 )
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 330.985, -60.0675, 0, 0, 0, 0, 352.422, -22.6568, 0, 0, 0, 0, 148.057, 75.3317, 0, 0, 0, 0, 187.714, -1.52381, 0, 0, 0, 0, 287.868, 113.205, 0, 0, 0, 0, 161.767, 295.027, 0, 0, 0, 0, 49.496, 135.346, 0, 0, 0, 0, -59.5207, 282.95, 0, 0, 0, 0, -158.363, 204.874, 0, 0, 0, 0, -267.764, 271.109, 0, 0, 0, 0, -356.469, 205.793, 0, 0, 0, 0, -133.231, 48.4849, 0, 0, 0, 0, -204.334, -24.3353, 0, 0, 0, 0, -139.138, -30.8222, 0, 0, 0, 0, 331.724, -58.8409 )
+}
+
+[node name="principal" type="Node2D"]
+position = Vector2( 1, 14 )
+script = ExtResource( 3 )
+
+[node name="campoVidas" type="Label" parent="."]
+margin_left = 8.0
+margin_right = 80.0
+margin_bottom = 24.0
+
+[node name="campoPontos" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 24.0
+margin_right = 79.0
+margin_bottom = 48.0
+
+[node name="campoTotalPontos" type="Label" parent="."]
+margin_left = 306.0
+margin_top = 194.0
+margin_right = 519.0
+margin_bottom = 263.0
+
+[node name="campoTimer" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 49.0
+margin_right = 83.0
+margin_bottom = 77.0
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( 130, 228 )
+collision_layer = 4
+collision_mask = 4
+script = ExtResource( 4 )
+
+[node name="spritePlayer" type="Sprite" parent="player"]
+position = Vector2( 2, -1 )
+scale = Vector2( 0.04725, 0.0463003 )
+texture = ExtResource( 1 )
+
+[node name="collisionPlayer" type="CollisionShape2D" parent="player"]
+position = Vector2( 0, -2 )
+shape = SubResource( 1 )
+
+[node name="death" type="AudioStreamPlayer2D" parent="player"]
+stream = ExtResource( 6 )
+
+[node name="obstaculo1" type="StaticBody2D" parent="."]
+position = Vector2( 419, 135 )
+collision_layer = 4
+collision_mask = 4
+
+[node name="spriteObstaculo" type="Sprite" parent="obstaculo1"]
+position = Vector2( 184, 38.2708 )
+scale = Vector2( 0.702703, 0.625 )
+texture = ExtResource( 7 )
+offset = Vector2( -99.6152, -82.1333 )
+
+[node name="collisionObstaculo" type="CollisionShape2D" parent="obstaculo1"]
+position = Vector2( 118, -11 )
+shape = SubResource( 3 )
+
+[node name="obstaculo2" type="StaticBody2D" parent="."]
+position = Vector2( 419, 135 )
+collision_layer = 4
+collision_mask = 4
+
+[node name="spriteObstaculo" type="Sprite" parent="obstaculo2"]
+position = Vector2( 216, 315.396 )
+scale = Vector2( 0.702703, 0.625 )
+texture = ExtResource( 7 )
+offset = Vector2( -99.6152, -82.1333 )
+
+[node name="collisionObstaculo" type="CollisionShape2D" parent="obstaculo2"]
+position = Vector2( 147, 268.396 )
+shape = SubResource( 3 )
+
+[node name="ghost" parent="obstaculo2" instance=ExtResource( 2 )]
+position = Vector2( 108.237, -20.057 )
+scale = Vector2( 1.35282, 1.63055 )
+curve = SubResource( 2 )
+
+[node name="ponto1" parent="." instance=ExtResource( 5 )]
+position = Vector2( 542, 48 )
+
+[node name="ponto2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 636, 48 )
+
+[node name="ponto3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 530, 349 )
+
+[node name="ponto4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 450, 49 )
+
+[node name="ponto5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 442, 560 )
+
+[node name="ponto6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 959, 121 )
+
+[node name="ponto7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 71, 435 )
+
+[node name="ponto8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 832, 311 )
+
+[node name="ponto9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 942, 536 )
+
+[node name="ponto10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 713, 569 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 180.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
