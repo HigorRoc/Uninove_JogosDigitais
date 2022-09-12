@@ -35,10 +35,10 @@ margin_right = 79.0
 margin_bottom = 48.0
 
 [node name="campoTotalPontos" type="Label" parent="."]
-margin_left = 306.0
-margin_top = 194.0
-margin_right = 519.0
-margin_bottom = 263.0
+margin_left = 8.0
+margin_top = 85.0
+margin_right = 221.0
+margin_bottom = 154.0
 
 [node name="campoTimer" type="Label" parent="."]
 margin_left = 7.0
