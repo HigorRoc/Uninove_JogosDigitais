@@ -8,7 +8,7 @@ Este repositório será utilizado para compor todos códigos + links da discplin
 ---
 
 ### :pushpin: Atividades e Arquivos
-> Atividade 01: Entregue :heavy_check_mark:
+> Atividade 01: Entregue :heavy_check_mark: (13/09/2022)
 
 ---
 
