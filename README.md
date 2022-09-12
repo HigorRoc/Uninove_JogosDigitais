@@ -8,7 +8,7 @@ Este repositório será utilizado para compor todos códigos + links da discplin
 ---
 
 ### :pushpin: Atividades e Arquivos
-> Sem atividades ainda :warning:
+> Atividade 01: Entregue :heavy_check_mark:
 
 ---
 
