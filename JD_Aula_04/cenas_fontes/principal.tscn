@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fontes/awakenning/AWAKENNING Personal Use.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fontes/roboto/RobotoCondensed-BoldItalic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://principal.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_color = Color( 0.427451, 0.462745, 0.815686, 1 )
+font_data = ExtResource( 2 )
+
+[node name="principal" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Titulo" type="RichTextLabel" parent="."]
+margin_left = 314.0
+margin_top = 38.0
+margin_right = 747.0
+margin_bottom = 141.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Game Higor"
+scroll_active = false
+
+[node name="cena1" type="Button" parent="."]
+margin_left = 418.0
+margin_top = 206.0
+margin_right = 637.0
+margin_bottom = 265.0
+focus_mode = 1
+custom_fonts/font = SubResource( 2 )
+enabled_focus_mode = 1
+text = "Cena 1"
+
+[connection signal="pressed" from="cena1" to="." method="_on_Button_pressed"]
