@@ -22,6 +22,7 @@ Este repositório será utilizado para compor todos códigos + links da discplin
 ### :pushpin: Links WebHost
 > Aula 21/09/2022: [https://higorovski.000webhostapp.com/aula_php/?valor_1=10&valor_2=20](https://higorovski.000webhostapp.com/aula_php/?valor_1=10&valor_2=20)
 
+> Aula 05/10/2022: [API To do List](https://github.com/EdsonMSouza/php-api-to-do-list) e [API Imc](https://github.com/EdsonMSouza/php-imc-api)
 ---
 
 Quaisquer dúvidas, entrar em contato através do e-mail institucional: 
