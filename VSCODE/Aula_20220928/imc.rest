@@ -1,0 +1,8 @@
+POST https://emsapi.000webhostapp.com/imcapi/api/
+
+{
+  "sexo": "masculino",
+  "peso": "89",
+  "altura": "1.75",
+  "idioma": "br"
+}
